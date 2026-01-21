@@ -35,12 +35,12 @@ public class Categoria {
         this.id = id;
     }
 
-    public Usuario getUsuario_id() {
+    public Usuario getUsuario() {
         return usuario_id;
     }
 
-    public void setUsuario_id(Usuario usuario_id) {
-        this.usuario_id = usuario_id;
+    public void setUsuario(Usuario usuario) {
+        this.usuario_id = usuario;
     }
 
     public String getNombre() {

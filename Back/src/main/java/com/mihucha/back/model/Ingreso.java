@@ -36,20 +36,20 @@ public class Ingreso {
         this.id = id;
     }
 
-    public Usuario getUsuario_id() {
+    public Usuario getUsuario() {
         return usuario_id;
     }
 
-    public void setUsuario_id(Usuario usuario_id) {
-        this.usuario_id = usuario_id;
+    public void setUsuario(Usuario usuario) {
+        this.usuario_id = usuario;
     }
 
-    public Categoria getCategoria_id() {
+    public Categoria getCategoria() {
         return categoria_id;
     }
 
-    public void setCategoria_id(Categoria categoria_id) {
-        this.categoria_id = categoria_id;
+    public void setCategoria(Categoria categoria) {
+        this.categoria_id = categoria;
     }
 
     public BigDecimal getCantidad() {
