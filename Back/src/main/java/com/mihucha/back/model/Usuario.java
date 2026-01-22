@@ -19,6 +19,7 @@ public class Usuario {
 
     private String email;
 
+
     private String password_hash;
 
     private LocalDateTime fecha_alta;

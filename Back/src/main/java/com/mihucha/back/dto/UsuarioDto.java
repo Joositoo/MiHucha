@@ -18,6 +18,11 @@ public class UsuarioDto {
         this.password_hash = password_hash;
     }
 
+    public UsuarioDto(String email, String password_hash) {
+        this.email = email;
+        this.password_hash = password_hash;
+    }
+
     public UsuarioDto(int id, String nombre, String email, LocalDateTime fechaAlta) {
         this.id = id;
         this.nombre = nombre;

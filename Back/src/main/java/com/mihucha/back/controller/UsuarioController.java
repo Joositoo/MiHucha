@@ -32,4 +32,15 @@ public class UsuarioController {
             throw new RuntimeException("Ya hay un usuario con el correo electrónico " +usuarioDto.getEmail());
         }
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<UsuarioDto> logIn(@RequestBody UsuarioDto usuarioDto){
+        if (usuarioService.isRegisteredUser(usuarioDto)){
+            Usuario usuario = usuarioService.getUserByEmail(usuarioDto.getEmail());
+            return ResponseEntity.ok(usuarioMapper.toDto(usuario));
+        }
+        else{
+            throw new RuntimeException("Credenciales incorrectas");
+        }
+    }
 }

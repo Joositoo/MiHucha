@@ -1,5 +1,6 @@
 package com.mihucha.back.service;
 
+import com.mihucha.back.dto.UsuarioDto;
 import com.mihucha.back.model.Usuario;
 import com.mihucha.back.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,9 @@ public class UsuarioService {
 
     public Usuario getUserByEmail (String email){
         return usuarioRepository.findByEmail(email).orElse(null);
+    }
+
+    public boolean isRegisteredUser(UsuarioDto usuarioDto) {
+        return usuarioRepository.existsByEmailAndPassword(usuarioDto.getEmail(), usuarioDto.getPassword_hash());
     }
 }
