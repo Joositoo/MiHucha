@@ -29,7 +29,7 @@ public class UsuarioController {
             return ResponseEntity.ok(usuarioMapper.toDto(createdUser));
         }
         else{
-            throw new RuntimeException("Ya hay un usuario con el correo electrónico" +usuarioDto.getEmail());
+            throw new RuntimeException("Ya hay un usuario con el correo electrónico " +usuarioDto.getEmail());
         }
     }
 }

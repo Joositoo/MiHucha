@@ -1,7 +1,10 @@
 package com.mihucha.back.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.time.LocalDateTime;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UsuarioDto {
     private int id;
     private String nombre;
@@ -20,6 +23,16 @@ public class UsuarioDto {
         this.nombre = nombre;
         this.email = email;
         this.fechaAlta = fechaAlta;
+    }
+
+    public UsuarioDto(){}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -44,5 +57,13 @@ public class UsuarioDto {
 
     public void setPassword_hash(String password_hash) {
         this.password_hash = password_hash;
+    }
+
+    public LocalDateTime getFechaAlta() {
+        return fechaAlta;
+    }
+
+    public void setFechaAlta(LocalDateTime fechaAlta) {
+        this.fechaAlta = fechaAlta;
     }
 }
